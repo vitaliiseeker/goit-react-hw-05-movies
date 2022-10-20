@@ -1,14 +1,14 @@
 import axios from "axios";
 import PropTypes from 'prop-types';
 
-axios.defaults.baseURL = "https://pixabay.com/api/";
-const KEY = "29859369-1fbaee8b518c313527d0ab1d2";
+axios.defaults.baseURL = "https://api.themoviedb.org/3/movie/";
+const KEY = "e5b22da478d64a4856b7de5bb232688f";
 
 export const fetchApi = async (query, page, perPage) => {
   const response = await axios({
     params: {
       q: query,
-      key: KEY,
+      api_key: KEY,
       image_type: "photo",
       orientation: "horizontal",
       per_page: perPage,
