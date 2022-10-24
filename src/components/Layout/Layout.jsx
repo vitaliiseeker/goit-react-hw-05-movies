@@ -13,7 +13,7 @@ export const Layout = () => {
         <Nav>
           <List>
             <Item>
-              <LinkNav className="active" to="/" end>Home</LinkNav>
+              <LinkNav to="/" end>Home</LinkNav>
             </Item>
             <Item>
               <LinkNav to="movies">Movies</LinkNav>
