@@ -10,7 +10,8 @@ export const Button = ({ type, children, onClick = () => { } }) => {
 Button.propTypes = {
   type: PropTypes.string,
   children: PropTypes.node,
-  onClick: PropTypes.func,
 }
+
+
 
 
