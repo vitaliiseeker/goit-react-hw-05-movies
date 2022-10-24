@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Loader } from 'components/Loader/Loader';
 import { getMovieDetailsCredits } from 'components/utils/fetchApi';
 import { List, Item, Imgbox } from './Cast.styled';
@@ -9,12 +9,12 @@ export const Cast = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const { movieId } = useParams();
-  const location = useLocation();
 
   useEffect(() => {
     if (movieId) {
       getCast();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [movieId]);
 
   const getCast = async () => {
