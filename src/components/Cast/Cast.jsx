@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Loader } from 'components/Loader/Loader';
 import { getMovieDetailsCredits } from 'components/utils/fetchApi';
 import { List, Item, Imgbox } from './Cast.styled';
+import { ReactComponent as Svg } from "../../images/uk.svg";
 
 const Cast = () => {
   const [cast, setCast] = useState([]);
@@ -38,7 +39,9 @@ const Cast = () => {
         {cast.map(({ credit_id, name, profile_path, character }) => (
           <Item key={credit_id}>
             <Imgbox>
-              <img src={profile_path ? `https://image.tmdb.org/t/p/w500${profile_path}` : ""} alt={name} width="120" />
+              {profile_path ?
+                (<img src={`https://image.tmdb.org/t/p/w500${profile_path}`} alt={name} width="120" />)
+                : <Svg width="120" height="180" />}
               {/* {profile_path && <img src={`https://image.tmdb.org/t/p/w500${profile_path}`} alt={name} width="120" />} */}
             </Imgbox>
             <>

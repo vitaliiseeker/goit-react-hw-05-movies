@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from 'prop-types';
 import { SearchMoviesContainer, SearchForm, SearchFormBtn, SearchFormBtnLabel, SearchFormInput } from './SearchbarMovies.styled';
-import { ReactComponent as IconBtn } from "../icons/search.svg";
+import { ReactComponent as IconBtn } from "../../images/search.svg";
 
 export const SearchbarMovies = ({ onSubmit }) => {
   const [query, setQuery] = useState('');

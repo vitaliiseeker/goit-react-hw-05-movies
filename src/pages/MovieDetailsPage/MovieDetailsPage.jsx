@@ -19,7 +19,6 @@ const MovieDetailsPage = () => {
           <LinkNav to="reviews" state={{ from: location?.state?.from }}>Reviews</LinkNav>
         </Item>
       </List>
-      {/* <Suspense fallback={<div>Loading page...</div>}> */}
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>

@@ -13,11 +13,5 @@ export const Item = styled.li`
 export const Imgbox = styled.div`
   width: 120px;
   height: 180px;
-
-  background-image: url('src/images/bg.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
 `;
 

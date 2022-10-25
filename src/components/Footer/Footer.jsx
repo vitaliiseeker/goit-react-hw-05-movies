@@ -1,5 +1,5 @@
 import { FooterContainer, LinkIcon } from "../Footer/Footer.styled";
-import { ReactComponent as IconTMDBshort } from "../icons/tmdbShort.svg";
+import { ReactComponent as IconTMDBshort } from "../../images/tmdbShort.svg";
 
 export const Footer = () => {
 
