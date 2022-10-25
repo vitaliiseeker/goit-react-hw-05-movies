@@ -6,22 +6,24 @@ import { Text, List, Item, LinkNav } from './MovieDetailsPage.styled';
 
 const MovieDetailsPage = () => {
   const location = useLocation();
-
   return (
     <>
       <MovieDetails />
-      <Text>Additional information</Text>
-      <List>
-        <Item>
-          <LinkNav to="cast" state={{ from: location?.state?.from }} >Cast</LinkNav>
-        </Item>
-        <Item>
-          <LinkNav to="reviews" state={{ from: location?.state?.from }}>Reviews</LinkNav>
-        </Item>
-      </List>
-      <Suspense fallback={<Loader />}>
-        <Outlet />
-      </Suspense>
+      {MovieDetails &&
+        <>
+          <Text>Additional information</Text>
+          <List>
+            <Item>
+              <LinkNav to="cast" state={{ from: location?.state?.from }} >Cast</LinkNav>
+            </Item>
+            <Item>
+              <LinkNav to="reviews" state={{ from: location?.state?.from }}>Reviews</LinkNav>
+            </Item>
+          </List>
+          <Suspense fallback={<Loader />}>
+            <Outlet />
+          </Suspense>
+        </>}
     </>
   );
 };

@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
+  padding-right: 20px;
   border-bottom: 3px solid #c0c0c0;
 `
 export const List = styled.ul`
@@ -20,7 +21,6 @@ export const LinkNav = styled(NavLink)`
   font-size: 34px;
   font-weight: 700;
   text-decoration: none;
-  /* color: #ff4040; */
   
   transition: color var(--animation);
 
