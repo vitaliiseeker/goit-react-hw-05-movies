@@ -21,17 +21,13 @@ export const LinkNav = styled(NavLink)`
   font-size: 18px;
   font-weight: 600;
   text-decoration: none;
-  /* color: #ff4040; */
-  color: #0000ff;
+  color: #004080;
   
   transition: color var(--animation);
 
   &.active,
-  :hover  {
-    color: #0000ff;
-
-    &::after {
-      transform: scaleX(1);
-    }
+  &:hover ,
+  &:focus {
+    color: #ffff00;
 }
 `;

@@ -6,7 +6,7 @@ import { SearchbarMovies } from "components/SearchbarMovies/SearchbarMovies";
 import { searchMovies } from "components/utils/fetchApi";
 import { Notification } from "components/Notification/Notification";
 
-export const MoviesPage = () => {
+const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -66,3 +66,5 @@ export const MoviesPage = () => {
     </>
   );
 };
+
+export default MoviesPage;

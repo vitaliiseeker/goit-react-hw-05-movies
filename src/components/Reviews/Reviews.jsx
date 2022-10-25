@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
-// eslint-disable-next-line no-unused-vars
 import { useParams } from 'react-router-dom';
 import { getMovieDetailsReviews } from 'components/utils/fetchApi';
 import { Notification } from "components/Notification/Notification";
 import { Loader } from 'components/Loader/Loader';
 import { List, Item } from './Reviews.styled';
 
-export const Reviews = () => {
+const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -47,3 +46,5 @@ export const Reviews = () => {
     </>
   );
 };
+
+export default Reviews;

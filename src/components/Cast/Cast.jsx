@@ -4,7 +4,7 @@ import { Loader } from 'components/Loader/Loader';
 import { getMovieDetailsCredits } from 'components/utils/fetchApi';
 import { List, Item, Imgbox } from './Cast.styled';
 
-export const Cast = () => {
+const Cast = () => {
   const [cast, setCast] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -51,3 +51,5 @@ export const Cast = () => {
     </>
   );
 };
+
+export default Cast;

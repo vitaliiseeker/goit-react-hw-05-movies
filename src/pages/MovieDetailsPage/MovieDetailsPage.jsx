@@ -1,10 +1,10 @@
-// import { Suspense } from "react";
+import { Suspense } from "react";
 import { Outlet, useLocation } from 'react-router-dom';
-// import { Loader } from "components/Loader/Loader";
+import { Loader } from "components/Loader/Loader";
 import { MovieDetails } from "components/MovieDetails/MovieDetails";
 import { Text, List, Item, LinkNav } from './MovieDetailsPage.styled';
 
-export const MovieDetailsPage = () => {
+const MovieDetailsPage = () => {
   const location = useLocation();
 
   return (
@@ -19,10 +19,12 @@ export const MovieDetailsPage = () => {
           <LinkNav to="reviews" state={{ from: location?.state?.from }}>Reviews</LinkNav>
         </Item>
       </List>
-      {/* <Suspense fallback={<Loader />}> */}
       {/* <Suspense fallback={<div>Loading page...</div>}> */}
-      <Outlet />
-      {/* </Suspense> */}
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };
+
+export default MovieDetailsPage;
