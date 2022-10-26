@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Loader } from 'components/Loader/Loader';
 import { getMovieDetailsCredits } from 'components/utils/fetchApi';
-import { List, Item, Imgbox } from './Cast.styled';
-import { ReactComponent as Svg } from "../../images/uk.svg";
+import { List, Item } from './Cast.styled';
+import Img from "../../images/uk.jpg";
+// import { ReactComponent as Svg } from "../../images/uk.svg";
+
 
 const Cast = () => {
   const [cast, setCast] = useState([]);
@@ -38,12 +40,10 @@ const Cast = () => {
       <List>
         {cast.map(({ credit_id, name, profile_path, character }) => (
           <Item key={credit_id}>
-            <Imgbox>
-              {profile_path ?
+            {<img src={profile_path ? `https://image.tmdb.org/t/p/w500${profile_path}` : Img} alt={name} width="180" height="270" />}
+            {/* {profile_path ?
                 (<img src={`https://image.tmdb.org/t/p/w500${profile_path}`} alt={name} width="120" />)
-                : <Svg width="120" height="180" />}
-              {/* {profile_path && <img src={`https://image.tmdb.org/t/p/w500${profile_path}`} alt={name} width="120" />} */}
-            </Imgbox>
+                : <Svg width="120" height="180" />} */}
             <>
               <h3>{name}</h3>
               <p>{character}</p>

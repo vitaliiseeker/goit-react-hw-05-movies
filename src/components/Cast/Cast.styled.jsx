@@ -1,17 +1,18 @@
 import styled from 'styled-components';
 
 export const List = styled.ul`
- padding-left: 40px;
+display: grid;
+max-width: calc(100vw - 48px);
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+grid-auto-flow: 260px;
+grid-gap: 16px;
+
 `;
 
 export const Item = styled.li`
- display: inline-block;
+ display: flex;
+ flex-direction: column;
+ gap: 8px;
  margin: 10px;
  padding: 10px;
 `;
-
-export const Imgbox = styled.div`
-  width: 120px;
-  height: 180px;
-`;
-
