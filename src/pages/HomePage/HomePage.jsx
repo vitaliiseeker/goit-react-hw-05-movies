@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Loader } from 'components/Loader/Loader';
 import { getTrendingMovies } from 'components/utils/fetchApi';
 import { MoviesList } from "components/MoviesList/MoviesList";
+import { SubTitle } from './HomePage.styled';
 
 const HomePage = () => {
 
@@ -23,7 +24,7 @@ const HomePage = () => {
       {isLoading && <Loader />}
       {movies &&
         <>
-          <h2>Trending today</h2>
+          <SubTitle>Trending today</SubTitle>
           <MoviesList movies={movies} />
         </>}
     </>
