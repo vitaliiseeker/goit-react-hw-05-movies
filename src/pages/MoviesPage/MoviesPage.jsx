@@ -57,11 +57,11 @@ const MoviesPage = () => {
 
   return (
     <>
-      {error && <p>Oops!</p>}
+      {error && <Notification message={error} />}
       {isLoading && <Loader />}
       <SearchbarMovies onSubmit={onSerchMovies} />
       {NotificationText && <Notification message={NotificationText} />}
-      {movies && <MoviesList movies={movies} />}
+      {!error && <MoviesList movies={movies} />}
 
     </>
   );
