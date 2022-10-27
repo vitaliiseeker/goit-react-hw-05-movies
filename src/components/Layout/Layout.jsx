@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { Outlet } from 'react-router-dom';
 import { Container } from "../Container/Container";
 import { Loader } from "../Loader/Loader";
-import { Nav, List, Item, LinkNav } from './Layout.styled';
+import { Nav, List, Item, LinkNav, LinkIcon } from './Layout.styled';
 import { Footer } from "components/Footer/Footer";
 import { ReactComponent as IconTMDBfull } from "../../images/tmdbFull.svg";
 

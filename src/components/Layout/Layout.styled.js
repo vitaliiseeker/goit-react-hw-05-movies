@@ -54,11 +54,15 @@ export const LinkNav = styled(NavLink)`
   }
 
   &.active,
-  :hover  {
+  &:hover  {
     color: #0000ff;
 
     &::after {
       transform: scaleX(1);
     }
 }
+`;
+
+export const LinkIcon = styled.a`
+  cursor: pointer;
 `;
