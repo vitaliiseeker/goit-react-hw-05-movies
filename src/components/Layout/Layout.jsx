@@ -19,7 +19,12 @@ export const Layout = () => {
               <LinkNav to="movies">Movies</LinkNav>
             </Item>
           </List>
+          <LinkIcon
+            href="https://www.themoviedb.org"
+            target="_blank"
+            rel="noopener nofollow noreferrer">
           <IconTMDBfull width="60" />
+          </LinkIcon>
         </Nav>
         <div style={{ flexGrow: 1 }}>
           <Suspense fallback={<Loader />}>
