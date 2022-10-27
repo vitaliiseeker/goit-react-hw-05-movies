@@ -21,9 +21,9 @@ const HomePage = () => {
 
   return (
     <>
-      {error && <Notification message={error}/>}
+      {error && <Notification message={error} />}
       {isLoading && <Loader />}
-      {!error &&
+      {!error && movies && !isLoading &&
         <>
           <SubTitle>Trending today</SubTitle>
           <MoviesList movies={movies} />

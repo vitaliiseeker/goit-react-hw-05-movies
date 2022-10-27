@@ -39,7 +39,7 @@ const MovieDetailsPage = () => {
           <Notification message={"Sorry, try again. Go to the main page."} />
         </LinkNav>}
       {isLoading && <Loader />}
-      {!error &&
+      {!error && movie && !isLoading &&
         <>
           <MovieDetails movie={movie} />
           <Text>Additional information</Text>

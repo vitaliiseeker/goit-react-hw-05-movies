@@ -10,7 +10,6 @@ export const getTrendingMovies = async () => {
       api_key: KEY,
     }
   });
-  console.log(response.data.results);
   return response.data.results;
 }
 

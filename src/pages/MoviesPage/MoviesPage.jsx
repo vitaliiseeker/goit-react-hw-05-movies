@@ -61,7 +61,7 @@ const MoviesPage = () => {
       {isLoading && <Loader />}
       <SearchbarMovies onSubmit={onSerchMovies} />
       {NotificationText && <Notification message={NotificationText} />}
-      {!error && <MoviesList movies={movies} />}
+      {!error && movies && !isLoading && <MoviesList movies={movies} />}
 
     </>
   );
